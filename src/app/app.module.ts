@@ -8,6 +8,8 @@ import { PipesTestComponent } from './components/pipes-test/pipes-test.component
 import { LanguagePickerComponent } from './components/language-picker/language-picker.component';
 import { FormsModule } from '@angular/forms';
 import { TranslationTestComponent } from './components/translation-test/translation-test.component';
+import { TranslatePipe } from './pipes/translate.pipe';
+// import { TranslatePipe } from './pipes/translate.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { TranslationTestComponent } from './components/translation-test/translat
     ToDoItemsComponent,
     PipesTestComponent,
     LanguagePickerComponent,
-    TranslationTestComponent
+    TranslationTestComponent,
+    TranslatePipe,
+    //TranslatePipe
   ],
   imports: [
     BrowserModule,

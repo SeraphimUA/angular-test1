@@ -10,7 +10,7 @@ export class LanguageService {
 
   setLanguage(newLang: any) {
     this.language$.next(newLang);
-    this.showLanguage();
+    //this.showLanguage();
   }
 
   constructor() {

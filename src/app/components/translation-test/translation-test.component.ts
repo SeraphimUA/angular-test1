@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
+import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
   selector: 'app-translation-test',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TranslationTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(readonly langService: LanguageService) { }
 
   ngOnInit(): void {
   }

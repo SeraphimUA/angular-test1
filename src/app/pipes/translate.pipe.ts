@@ -17,7 +17,7 @@ export class TranslatePipe implements PipeTransform {
 
     return currentLang$
       .pipe(
-        map(currentLang => this.translationService.translations[currentLang][value])
+        map(currentLang => this.translationService.translations[currentLang][value] || value)
       )
 
     // return this.translationService.translations[currentLang][tmpStr];
