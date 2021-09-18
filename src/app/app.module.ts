@@ -9,6 +9,7 @@ import { LanguagePickerComponent } from './components/language-picker/language-p
 import { FormsModule } from '@angular/forms';
 import { TranslationTestComponent } from './components/translation-test/translation-test.component';
 import { TranslatePipe } from './pipes/translate.pipe';
+import { CounterComponent } from './components/counter/counter.component';
 // import { TranslatePipe } from './pipes/translate.pipe';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
     LanguagePickerComponent,
     TranslationTestComponent,
     TranslatePipe,
+    CounterComponent,
     //TranslatePipe
   ],
   imports: [

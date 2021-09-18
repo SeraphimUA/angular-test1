@@ -5,13 +5,14 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Pipe({
-  name: 'translate'
+  name: 'translate',
+  pure: false,
 })
 export class TranslatePipe implements PipeTransform {
   constructor(private readonly translationService: TranslationService,
     private readonly langService: LanguageService) { }
 
-  transform(value: string): Observable<string> {
+  /*transform(value: string): Observable<string> {
     var currentLang$ = this.langService.language$;
     console.log(`value: ${value} value type: ${typeof value} currentLang: ${currentLang$.value}`);
 
@@ -19,8 +20,14 @@ export class TranslatePipe implements PipeTransform {
       .pipe(
         map(currentLang => this.translationService.translations[currentLang][value] || value)
       )
+  }*/
 
-    // return this.translationService.translations[currentLang][tmpStr];
+  transform(value: string): string {
+    var currentLang = this.langService.language$.value;
+    
+    // console.log(`value: ${value} value type: ${typeof value} currentLang: ${currentLang}`);
+
+    return this.translationService.translations[currentLang][value] || value;
   }
 
 }
